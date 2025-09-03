@@ -1,11 +1,12 @@
+import React from 'react';
 import { View, SafeAreaView, Text } from 'react-native';
 
-const StoreScreen = () => {
+const MyScreen = () => {
     return (
         <SafeAreaView>
-            <Text>스토어 뷰</Text>
+            <Text>MyScreen</Text>
         </SafeAreaView>
     );
 };
 
-export default StoreScreen;
+export default MyScreen;
