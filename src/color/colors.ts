@@ -3,4 +3,5 @@ export const colors = {
 
     white: '#FFFFFF',
     black: '#0B0B0F',
+    grey: '#EEEEEE',
 } as const; //  TypeScript의 const assertion. 리터럴 타입 고정
