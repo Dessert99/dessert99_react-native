@@ -3,8 +3,7 @@ import { Image, View } from 'react-native';
 import { StyleSheet } from 'react-native';
 
 //아이콘
-import AntDesign from '@expo/vector-icons/AntDesign';
-import Ionicons from '@expo/vector-icons/Ionicons';
+import { AntDesign, Ionicons } from '@expo/vector-icons';
 
 //이미지
 import forALogo from '../assets/forALogo .png';
@@ -24,13 +23,25 @@ const TodayStack = () => {
             <Stack.Screen
                 name="TodayHome"
                 component={TodayScreen}
-                options={() => ({
+                options={({ navigation }) => ({
                     headerTitle: '',
                     headerLeft: () => <Image source={forALogo} />,
                     headerRight: () => (
                         <View style={styles.container1}>
-                            <AntDesign name="search1" style={styles.icon} size={30} color="black" />
-                            <Ionicons name="notifications-outline" style={styles.icon} size={30} color="black" />
+                            <AntDesign
+                                name="search1"
+                                style={styles.icon}
+                                size={30}
+                                color="black"
+                                onPress={() => navigation.navigate('Search')}
+                            />
+                            <Ionicons
+                                name="notifications-outline"
+                                style={styles.icon}
+                                size={30}
+                                color="black"
+                                onPress={() => navigation.navigate('Notification')}
+                            />
                         </View>
                     ),
                 })}

@@ -11,6 +11,8 @@ export type DrugStackParamList = {
 export type TodayStackParamList = {
     TodayHome: undefined;
     Post: { userName: string };
+    Notification: undefined;
+    Search: undefined;
 };
 
 export type MyStackParamList = {
